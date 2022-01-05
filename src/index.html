@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Coffee Shop</title>
+</head>
+<body>
+
+<header class="header-container">
+    <div class="background-img">
+      <img class="img-coffee" src="images/background.png" alt="background-img">
+    </div>
+    <div class="header-wrapper-container">
+      <h2 class="logo-title">El TIGRE</h2>
+      <h5 class="row logo col-lg-4">VENEZUELA COFFEE BEANS</h5>
+      <ul class="main-nav col-lg-8">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#product">PRODUCT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="page-title">
+      <h1 class="p-title-home">HOME OF</h1>
+      <h1 class="p-title-original">ORIGINAL TASTES</h1>
+    </div>
+      <h5 class="discover">DISCOVER</h5>
+      <i class="far fa-arrow-alt-circle-down"></i>
+</header>
+
+<div id="pages">
+  <section id="home">
+    <div class="home-wrapper container"></div>
+  </section>
+  <section id="products">
+    <div class="products-wrapper container">
+      <div class="section-title">
+        <h1>PRODUCTS</h1>
+        <p class="section-title-line col-6"></p>
+      </div>
+      <div class="products-list"></div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="contact-wrapper container"></div>
+  </section>
+</div>
+<script id="template-product-widget" type="text/x-handlebars-template">
+  <div class="product-widget container">
+    <div class="skill-right">
+      <div class="product-image">
+        {{{ images }}}
+      </div>
+      <div class="description">
+        <h3 class="name">{{{ number }}} {{{ name }}}</h3>
+        <div class="row">
+          <p class="border-top col-2"></p>
+          <span class="col-8 details">{{{ description }}}</span>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 qualities">
+            <p>roasting:<span>{{{ roasting }}}</span></p>
+            <p>intensity:<span>{{{ intensity }}}</span></p>
+          </div>
+          <div class="col-sm-5 badge">
+            {{{ popular }}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+<script src="js/app.js" type="module"></script>
+</body>
+</html>
