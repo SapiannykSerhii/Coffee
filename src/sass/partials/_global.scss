@@ -1,7 +1,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   background: $color-light;
@@ -9,13 +9,8 @@ body {
   font-size: 14px;
   line-height: 1.7;
   color: $color-dark;
-  text-align: center;
-}
-
-
+  box-sizing: border-box;
   
-.header-container{
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 20px;
+
 }
+  
