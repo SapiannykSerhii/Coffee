@@ -12,11 +12,8 @@
 }
 
 header{
-  max-width: 1920px;
   background-color: $color-light;
   position: relative;
-  max-height: 850px;
-
 }
 
 .header-wrapper{
@@ -39,7 +36,7 @@ header{
 .main-nav{
   margin-top: -35px;
   padding-right: 0;
-  z-index: 999;
+  z-index: 9;
 }
 
 ul{
@@ -131,8 +128,8 @@ ul{
   margin-bottom: 0;
   padding-top: 25%;
   vertical-align: text-bottom;
-  font-family: $font-weight-regular;
   font-size: 25px;
+  $font-weight-regular: 400;
 }
 
 i{
