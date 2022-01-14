@@ -1,6 +1,6 @@
 import Home from './components/Home.js';
 import Product from './components/Product.js';
-import { className, select, settings } from './settings.js';
+import { classNames, select, settings } from './settings.js';
 
 const app = {
 
@@ -43,36 +43,22 @@ const app = {
     for(let page of thisApp.pages){
       // console.log(page);
       page.classList.toggle(
-        className.pages.active, 
-        page.id === pageId
+        classNames.pages.active, 
+        page.id == pageId
       );
       
     }
 
     for(let link of thisApp.navLinks){
       link.classList.toggle(
-        className.nav.active,
-        link.getAttribute('href') === '#' + pageId
+        classNames.nav.active,
+        link.getAttribute('href') == '#' + pageId
       );
       
     }
   },
 
-  initHome: function(){
-    const thisApp = this;
-    
-    for(let productData in thisApp.data.products){
-      new Home(thisApp.data.products[productData].id, thisApp.data.products[productData]) ;
-    }
-  },
-
-  initMenu: function(){
-    const thisApp = this;
-    
-    for(let productData in thisApp.data.products) {
-      new Product( thisApp.data.products[productData].id, thisApp.data.products[productData]);
-    }
-  },
+  
 
   initData: function() {
     const thisApp = this;
@@ -90,6 +76,39 @@ const app = {
       });
   },
 
+  // initHome: function(){
+  //   const thisApp = this;
+    
+  //   for(let productData in thisApp.data.products){
+  //     new Home(thisApp.data.products[productData].id, thisApp.data.products[productData]) ;
+  //   }
+  // },
+
+  // initMenu: function(){
+  //   const thisApp = this;
+    
+  //   for(let productData in thisApp.data.products) {
+  //     new Product( thisApp.data.products[productData].id, thisApp.data.products[productData]);
+  //   }
+  // },
+  initHome: function(){
+    
+    const thisApp = this;
+    console.log('thisApp.data', thisApp.data);
+
+    for(let productData in thisApp.data.products){
+      new Home(productData, thisApp.data.products[productData]);
+    }
+  },
+  initMenu: function(){
+    
+    const thisApp = this;
+    console.log('thisApp.data', thisApp.data);
+
+    for(let productData in thisApp.data.products){
+      new Product(productData, thisApp.data.products[productData]);
+    }
+  },
   init: function() {
     const thisApp = this;
     thisApp.initData();

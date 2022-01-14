@@ -4,8 +4,8 @@
 
 .background-image{
   position: absolute;
-  left: 0;
-  right: 0;
+  // left: 0;
+  // right: 0;
   z-index: 1;
   filter: brightness(55%);
   // visibility: hidden;
@@ -18,16 +18,16 @@ header{
 
 .header-wrapper{
   z-index: 9;
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
 
 .logo{
   display: inline;
-  position: absolute;
+  // position: absolute;
   left: 0;
   right: 0;
   z-index: 1;
@@ -85,7 +85,7 @@ ul{
 
 .page-title{
   color: $color-gold;
-  position: absolute;
+  // position: absolute;
   left: 0;
   right: 0;
   padding-top: 200px;
@@ -113,20 +113,20 @@ ul{
   :after{
     position: absolute;
     content: '';
-    bottom: 58px;
+    bottom: 100px;
     left: 50%;
     width: 200px;
     height: 2px;
     transform: translateX(-50%);
     background: $color-gold;
-    margin-bottom: 25%;
+    margin-bottom: 300px;
   }  
 }
 
 .discover{
   color: $color-light;
   margin-bottom: 0;
-  padding-top: 25%;
+  padding-top: 300px;
   vertical-align: text-bottom;
   font-size: 25px;
   $font-weight-regular: 400;
@@ -136,3 +136,12 @@ i{
   color: $color-light;
   font-size: 25px;
 }
+// #pages {
+//   > * {
+//     display: none;
+//   }
+  
+//   > .active {
+//     display: block;
+//   }
+// }

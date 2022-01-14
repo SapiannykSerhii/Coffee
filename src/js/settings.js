@@ -28,7 +28,7 @@ export const settings = {
   }
 };
 
-export const className = {
+export const classNames = {
   nav: {
     active: 'active',
   },
