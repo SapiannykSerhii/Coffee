@@ -36,7 +36,7 @@ header{
 .main-nav{
   margin-top: -35px;
   padding-right: 0;
-  z-index: 9;
+  z-index: 999;
 }
 
 ul{
@@ -136,12 +136,3 @@ i{
   color: $color-light;
   font-size: 25px;
 }
-// #pages {
-//   > * {
-//     display: none;
-//   }
-  
-//   > .active {
-//     display: block;
-//   }
-// }

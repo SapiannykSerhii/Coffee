@@ -16,7 +16,7 @@ const app = {
     let pageMatchinHash = thisApp.pages[0].id;
 
     for (let page of thisApp.pages) {
-      if(page.id === idFromHash ){
+      if(page.id == idFromHash ){
         pageMatchinHash = page.id;
         break;
       }
@@ -26,7 +26,6 @@ const app = {
 
     for(let link of thisApp.navLinks ){
       link.addEventListener('click', function(event){
-        // console.log(link);
         const clickedElement = this; /*??*/
         event.preventDefault();
 
@@ -76,25 +75,10 @@ const app = {
       });
   },
 
-  // initHome: function(){
-  //   const thisApp = this;
-    
-  //   for(let productData in thisApp.data.products){
-  //     new Home(thisApp.data.products[productData].id, thisApp.data.products[productData]) ;
-  //   }
-  // },
-
-  // initMenu: function(){
-  //   const thisApp = this;
-    
-  //   for(let productData in thisApp.data.products) {
-  //     new Product( thisApp.data.products[productData].id, thisApp.data.products[productData]);
-  //   }
-  // },
   initHome: function(){
     
     const thisApp = this;
-    console.log('thisApp.data', thisApp.data);
+    // console.log('thisApp.data', thisApp.data);
 
     for(let productData in thisApp.data.products){
       new Home(productData, thisApp.data.products[productData]);
@@ -103,9 +87,10 @@ const app = {
   initMenu: function(){
     
     const thisApp = this;
-    console.log('thisApp.data', thisApp.data);
+    // console.log('thisApp.data', thisApp.data);
 
     for(let productData in thisApp.data.products){
+      // console.log(productData);
       new Product(productData, thisApp.data.products[productData]);
     }
   },

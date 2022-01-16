@@ -6,7 +6,7 @@ export const select = {
   },
   containerOf:{
     pages: '#pages',
-    product: '.product-wrapper',
+    product: '.products-wrapper',
     contact: '.contact-wrapper',
   },
   home:{
@@ -22,7 +22,7 @@ export const select = {
 
 export const settings = {
   db: {
-    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
+    url: '//' + window.location.hostname + (window.location.hostname === 'localhost' ? ':3131' : ''),
     // url: '//localhost:3131',
     products: 'products',
   }
