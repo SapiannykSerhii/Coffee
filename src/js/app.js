@@ -13,16 +13,16 @@ const app = {
     // console.log(thisApp.navLinks);
     const idFromHash = window.location.hash.replace('#/', '');
 
-    let pageMatchinHash = thisApp.pages[0].id;
+    let pageMatchingHash = thisApp.pages[0].id;
 
     for (let page of thisApp.pages) {
       if(page.id == idFromHash ){
-        pageMatchinHash = page.id;
+        pageMatchingHash = page.id;
         break;
       }
     }
 
-    thisApp.activatePage(pageMatchinHash);
+    thisApp.activatePage(pageMatchingHash);
 
     for(let link of thisApp.navLinks ){
       link.addEventListener('click', function(event){
@@ -81,7 +81,7 @@ const app = {
     // console.log('thisApp.data', thisApp.data);
 
     for(let productData in thisApp.data.products){
-      new Home(productData, thisApp.data.products[productData]);
+      new Home(thisApp.data.products[productData].id, thisApp.data.products[productData]);
     }
   },
   initMenu: function(){
@@ -91,11 +91,12 @@ const app = {
 
     for(let productData in thisApp.data.products){
       // console.log(productData);
-      new Product(productData, thisApp.data.products[productData]);
+      new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
     }
   },
   init: function() {
     const thisApp = this;
+
     thisApp.initData();
     thisApp.initPages();
   },
