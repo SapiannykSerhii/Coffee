@@ -49,7 +49,7 @@ const app = {
     }
 
     for(let link of thisApp.navLinks){
-      link.classList.add(
+      link.classList.toggle(
         classNames.nav.active,
         link.getAttribute('href') == '#' + pageId
       );
